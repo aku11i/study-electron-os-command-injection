@@ -6,7 +6,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("directory_name").value;
     if (!name) return;
 
-    window.electron.createNewDirectory(name);
-    alert(`Directory "${name}" was created successfully.`);
+    window.electron.createNewDirectory(name).then(() => {
+      alert(`Directory "${name}" was created successfully.`);
+    });
   });
 });
