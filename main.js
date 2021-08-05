@@ -36,3 +36,8 @@ ipcMain.handle("CREATE_NEW_DIRECTORY", (_event, name) => {
   console.log("execSync:", command);
   execSync(command);
 });
+
+// ipcMain.handle("CREATE_NEW_DIRECTORY", (_event, name) => {
+//   // Safe way
+//   require("child_process").execFileSync("mkdir", [name]);
+// });
