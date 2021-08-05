@@ -24,7 +24,7 @@ yarn start
 ### ディレクトリをエクスプローラで開く
 
 Windows の場合<br>
-`dir"; start . ||` と入力（多分。試していません…）
+`dir"; start . || rem "` と入力（多分。試していません…）
 
 Mac の場合<br>
 `dir"; open . #` と入力
