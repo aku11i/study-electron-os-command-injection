@@ -1,9 +1,11 @@
 # study-electron-os-command-injection
 
 Electron を使ったアプリ開発のプロジェクトに参加していた時に OS コマンドインジェクションの脆弱性を発見し、指摘・修正した経験がありました。
+
 その時の事例を元に作成したサンプルプロジェクトです。
 
-詳細：
+## 詳細
+
 https://zenn.dev/aktriver/articles/2021-08-electron-os-command-injection
 
 ![](./example.png)
@@ -21,12 +23,16 @@ yarn start
 
 ### ディレクトリをエクスプローラで開く
 
-Windows の場合：`dir"; start . ||` と入力（多分。試していません…）
-Mac の場合：`dir"; open . #` と入力
+Windows の場合<br>
+`dir"; start . ||` と入力（多分。試していません…）
+
+Mac の場合<br>
+`dir"; open . #` と入力
 
 ### スピーカーから音を出す
 
-Mac の場合：`dir"; say "任意の言葉" #` と入力
+Mac の場合<br>
+`dir"; say "任意の言葉" #` と入力
 
 ## 対策
 
