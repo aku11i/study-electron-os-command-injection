@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron/main");
+const { execSync } = require("child_process");
 const path = require("path");
+const os = require("os");
 
 console.log("main");
 
@@ -26,4 +28,11 @@ app.whenReady().then(() => {
 
 app.on("window-all-closed", function () {
   app.quit();
+});
+
+ipcMain.handle("CREATE_NEW_DIRECTORY", (_event, name) => {
+  const command = `mkdir "${name}"`;
+
+  console.log("execSync:", command);
+  execSync(command);
 });
