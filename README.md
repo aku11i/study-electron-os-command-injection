@@ -9,7 +9,7 @@ https://zenn.dev/aktriver/articles/2021-08-electron-os-command-injection
 ## 実行
 
 ```sh
-yarn install --frozen-lockfile
+yarn install
 yarn start
 ```
 
